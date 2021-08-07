@@ -2,6 +2,7 @@ from requests import Session
 import json
 
 # This is a test
+# This is another test line
 
 quotes_latest_url = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest' # The URL to the Coin Market Cap latest quotes database
 
