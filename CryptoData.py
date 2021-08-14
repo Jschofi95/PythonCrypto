@@ -32,11 +32,16 @@ def getLatestData(type, data_name):
     response = session.get(quotes_latest_url, params=crypto_param)
 
     # Checks if the data_name variable is a correct type of data supported by the API
+    #if data_name not in dataNames:
+        #print("Incorrect data type \"{}\". \nUsage: ".format(data_name), end=" ")
+        #for name in dataNames:
+            #print("\"{}\"".format(name), end=" ")
+        #return -1
+        
     if data_name not in dataNames:
-        print("Incorrect data type \"{}\". \nUsage: ".format(data_name), end=" ")
-        for name in dataNames:
-            print("\"{}\"".format(name), end=" ")
         return -1
+    if type not in cryptoID:
+        return -2
 
     for name in dataNames:
         if data_name == name:
